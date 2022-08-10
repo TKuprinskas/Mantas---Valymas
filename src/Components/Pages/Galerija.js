@@ -1,4 +1,6 @@
 import React, { Suspense } from 'react';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Gallery from '../Layout/Gallery/gallery';
 import * as S from '../../styles/styles';
 
 const Galerija = () => {
@@ -6,6 +8,9 @@ const Galerija = () => {
         <main>
             <Suspense fallback={<div>Loading...</div>}>
                 <S.Title>Galerija</S.Title>
+                <S.Galerija>
+                    <Gallery />
+                </S.Galerija>
             </Suspense>
         </main>
     );

@@ -173,3 +173,12 @@ export const KontaktaiText = styled.div`
         text-align: justify;
     }
 `;
+
+export const Galerija = styled.div`
+    margin: 0 auto;
+    width: 50%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`;
