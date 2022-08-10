@@ -7,7 +7,7 @@ const Galerija = () => {
     return (
         <main>
             <Suspense fallback={<div>Loading...</div>}>
-                <S.Title>Galerija</S.Title>
+                <S.Title>Galerija TEST</S.Title>
                 <S.Galerija>
                     <Gallery />
                 </S.Galerija>
