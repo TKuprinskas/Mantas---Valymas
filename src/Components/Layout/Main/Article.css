@@ -1,0 +1,42 @@
+.article {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 2rem;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.article__text {
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.article__title,
+.article__content {
+  text-align: justify;
+  width: 100%;
+}
+
+.article__image {
+  width: 75%;
+}
+
+.article__image img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .article {
+    width: 100%;
+    display: block;
+  }
+
+  .article__image {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .article__image img {
+    width: 100%;
+  }
+}

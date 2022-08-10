@@ -1,0 +1,156 @@
+/* Button CSS */
+:root {
+  --primary: orange;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  padding: 8px 20px;
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: orange;
+  transition: 250ms;
+}
+
+.btn--primary {
+  background: var(--primary);
+}
+
+.btn--outline {
+  background: transparent;
+  color: orange;
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+  transition: all o0.3s ease-out;
+}
+
+.btn--medium {
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  border-radius: 4px;
+  font-size: 20px;
+  color: orange;
+}
+
+/* Container CSS */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* FlexWrapper CSS */
+.main-wrapper__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .main-wrapper__content {
+    display: block;
+  }
+}
+
+/* ImageGallery CSS */
+.tags {
+  text-align: center;
+  padding: 15px 0px;
+  /* background-color: rgb(43, 92, 226); */
+  background-color: #cb5223;
+}
+
+.tag {
+  outline: none;
+  border: none;
+  color: #eee;
+  margin: 0px 30px;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.imgactive {
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+}
+
+.image-container {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.image-card {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.image-gallery {
+  width: 100%;
+}
+
+.shop-content {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.shirts-box {
+  width: 100%;
+}
+
+.dydziai {
+  width: 80%;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .shirts-box {
+    width: 100%;
+  }
+
+  .dydziai {
+    width: 100%;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+
+  .image-container {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tag {
+    margin: 0 10px;
+  }
+
+  .image-card h5 {
+    font-size: 10px;
+  }
+
+  .image-card h4 {
+    font-size: 12px;
+  }
+}

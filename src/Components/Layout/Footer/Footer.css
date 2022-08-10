@@ -1,0 +1,103 @@
+.footer {
+    border-top: 1px solid #59bfff;
+    margin-top: 2rem;
+    background: #59bfff;
+    color: #fff;
+}
+
+.footer-content-left h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-content-center h3 {
+    margin-bottom: 2rem;
+}
+
+.footer-content-right h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footer-content i {
+    color: #fff;
+}
+
+.footer-content a {
+    color: #fff;
+}
+
+.footer-content li {
+    list-style-type: none;
+    padding: 0.5rem 0;
+}
+
+.footer-content-center {
+    text-align: center;
+}
+
+.footer-content-center a {
+    padding: 0rem 1rem;
+}
+
+.footer-content-center li {
+    margin-top: 0.2rem;
+}
+
+.fa-facebook {
+    font-size: 2rem;
+}
+
+.fa-instagram-square {
+    font-size: 2rem;
+}
+
+.fa-donate {
+    font-size: 2rem;
+}
+
+.fa-youtube {
+    font-size: 2rem;
+}
+
+.apps-logos {
+    text-align: center;
+    display: block;
+}
+
+.google-app img {
+    width: 200px;
+}
+
+.apple-app img {
+    width: 160px;
+    height: 76px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .footer-content-center {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .apps-logos {
+        margin-top: -2rem;
+    }
+
+    .apps-logos img {
+        margin-top: -20px;
+    }
+}
