@@ -25,7 +25,7 @@ export const PaslauguKainos = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 30%;
+    width: 35%;
     margin: 0 auto 1rem auto;
 
     @media (max-width: 768px) {

@@ -40,9 +40,9 @@ const Home = () => {
                             title="youtube"
                             width="560"
                             height="315"
-                            src="https://www.youtube.com/embed/oVgBuSglSy0"
+                            src="https://www.youtube.com/embed/oVgBuSglSy0?autoplay=1&mute=1&enablejsapi=1"
                             frameBorder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         />
                     </S.YoutubeVideo>
