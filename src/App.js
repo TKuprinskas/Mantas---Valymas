@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Layout/Header/Navbar';
+import Navbarmenu from './Components/Layout/Header/Navbarmenu';
 import Hero from './Components/Layout/Hero/Hero';
 import Home from './Components/Pages/Home';
 import EkoPriemones from './Components/Pages/EkoPriemones';
@@ -21,7 +21,7 @@ function App() {
     return (
         <div className="App">
             <Suspense fallback={<div>Loading...</div>}>
-                <Navbar />
+                <Navbarmenu />
                 <Hero />
                 <Container>
                     <Routes>

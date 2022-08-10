@@ -7,26 +7,20 @@ const Kontaktai = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <S.Title>Mūsų Kontaktai</S.Title>
                 <S.Container>
-                    <S.Kontaktai>
-                        <S.KontaktaiText>
-                            Jeigu negalite rasti paslaugos, kurios norite, arba jeigu turite klausimų, prašome
-                            susisiekti su mumis ir mes mielai atsakysime į visus Jūsų klausimus, ir tikrai rasime
-                            sprendimą tenkinantį Jūsų poreikius.
-                        </S.KontaktaiText>
-                    </S.Kontaktai>
+                    <S.KontaktaiText>
+                        Jeigu negalite rasti paslaugos, kurios norite, arba jeigu turite klausimų, prašome susisiekti su
+                        mumis ir mes mielai atsakysime į visus Jūsų klausimus, ir tikrai rasime sprendimą tenkinantį
+                        Jūsų poreikius.
+                    </S.KontaktaiText>
                     <S.Kontaktai>
                         <S.KontaktaiText>Mus galite rasti socialiniuose tinkluose:</S.KontaktaiText>
                         <S.KontaktaiText>
                             <a href="https://www.facebook.com/">
                                 <i className="fab fa-facebook" />
                             </a>
-                        </S.KontaktaiText>
-                        <S.KontaktaiText>
                             <a href="https://www.instagram.com/">
                                 <i className="fab fa-instagram-square" />
                             </a>
-                        </S.KontaktaiText>
-                        <S.KontaktaiText>
                             <a href="https://www.youtube.com/">
                                 <i className="fab fa-youtube" />
                             </a>

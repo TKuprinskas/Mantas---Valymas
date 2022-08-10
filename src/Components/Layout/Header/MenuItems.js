@@ -1,15 +1,5 @@
 export const MenuItems = [
     {
-        title: 'Paslaugos',
-        url: 'paslaugos',
-        cName: 'nav-links',
-    },
-    {
-        title: 'Prekės',
-        url: 'prekes',
-        cName: 'nav-links',
-    },
-    {
         title: 'Galerija',
         url: 'galerija',
         cName: 'nav-links',
@@ -29,33 +19,33 @@ export const MenuItems = [
 export const PaslaugosMenu = [
     {
         title: 'Baldų Valymas',
-        url: 'balduvalymas',
-        cName: 'nav-links',
+        url: '/balduvalymas',
+        activeClassName: 'is-active',
     },
     {
         title: 'Čiužinių Valymas',
-        url: 'ciuzinuvalymas',
-        cName: 'nav-links',
+        url: '/ciuzinuvalymas',
+        cName: 'is-active',
     },
     {
         title: 'Kilimų Valymas',
-        url: 'kilimuvalymas',
-        cName: 'nav-links',
+        url: '/kilimuvalymas',
+        cName: 'is-active',
     },
     {
         title: 'Kiliminės Dangos Valymos',
-        url: 'kiliminesdangosvalymas',
-        cName: 'nav-links',
+        url: '/kiliminesdangosvalymas',
+        cName: 'is-active',
     },
     {
         title: 'Langų Valymas',
-        url: 'languvalymas',
-        cName: 'nav-links',
+        url: '/languvalymas',
+        cName: 'is-active',
     },
     {
         title: 'Generalinis Valymas',
-        url: 'generalinisvalymas',
-        cName: 'nav-links',
+        url: '/generalinisvalymas',
+        cName: 'is-active',
     },
 ];
 
@@ -63,6 +53,6 @@ export const PrekesMenu = [
     {
         title: 'Ekologiškos valymo priemonės',
         url: 'ekologisvalymopriemones',
-        cName: 'nav-links',
+        cName: 'is-active',
     },
 ];

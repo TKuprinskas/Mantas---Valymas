@@ -143,12 +143,21 @@ export const Kontaktai = styled.div`
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
 `;
 
 export const KontaktaiText = styled.div`
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
-    margin: 0.5rem 1rem 0 0;
+    margin: 0.5rem 0;
+
+    a {
+        margin-left: 1rem;
+    }
 
     i {
         font-size: 2rem;
@@ -157,5 +166,10 @@ export const KontaktaiText = styled.div`
 
     i:hover {
         color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+        margin: 0.5rem 0 0 0;
+        text-align: justify;
     }
 `;
