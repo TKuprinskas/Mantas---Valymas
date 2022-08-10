@@ -1,5 +1,5 @@
 ---
 deployment:
-  tasks:
-    - export DEPLOYPATH=/home/tenisopa/public_html/
-    - /bin/cp -a * $DEPLOYPATH
+    tasks:
+        - export DEPLOYPATH=/home/tenisopa/svara.tenisopasaulis.lt/
+        - /bin/cp -a * $DEPLOYPATH
