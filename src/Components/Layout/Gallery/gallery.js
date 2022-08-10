@@ -7,7 +7,7 @@ import langai from '../../../Assets/Images/glass.jpg';
 import generalinis from '../../../Assets/Images/general.jpg';
 
 const Gallery = () => (
-    <Carousel autoPlay>
+    <Carousel autoPlay infiniteLoop>
         <div>
             <img src={baldai} />
         </div>
