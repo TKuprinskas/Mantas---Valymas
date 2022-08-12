@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import { Link } from 'react-router-dom';
 import * as S from '../../styles/styles';
 import baldai from '../../Assets/Images/furniture.jpg';
 import kilimai from '../../Assets/Images/carpet.jpg';
@@ -15,24 +16,34 @@ const Home = () => {
                 <S.Container>
                     <S.Paslaugos>
                         <S.PaslaugosBox>
-                            <S.PaslaugosImg src={baldai} />
-                            <S.PaslaugosTitle>Baldų Valymas</S.PaslaugosTitle>
+                            <Link to="/balduvalymas">
+                                <S.PaslaugosImg src={baldai} />
+                                <S.PaslaugosTitle>Baldų Valymas</S.PaslaugosTitle>
+                            </Link>
                         </S.PaslaugosBox>
                         <S.PaslaugosBox>
-                            <S.PaslaugosImg src={ciuziniai} />
-                            <S.PaslaugosTitle>Čiužinių Valymas</S.PaslaugosTitle>
+                            <Link to="/ciuzinuvalymas">
+                                <S.PaslaugosImg src={ciuziniai} />
+                                <S.PaslaugosTitle>Čiužinių Valymas</S.PaslaugosTitle>
+                            </Link>
                         </S.PaslaugosBox>
                         <S.PaslaugosBox>
-                            <S.PaslaugosImg src={kilimai} />
-                            <S.PaslaugosTitle>Kilimų Valymas</S.PaslaugosTitle>
+                            <Link to="/kilimuvalymas">
+                                <S.PaslaugosImg src={kilimai} />
+                                <S.PaslaugosTitle>Kilimų Valymas</S.PaslaugosTitle>
+                            </Link>
                         </S.PaslaugosBox>
                         <S.PaslaugosBox>
-                            <S.PaslaugosImg src={langai} />
-                            <S.PaslaugosTitle>Langų Valymas</S.PaslaugosTitle>
+                            <Link to="/languvalymas">
+                                <S.PaslaugosImg src={langai} />
+                                <S.PaslaugosTitle>Langų Valymas</S.PaslaugosTitle>
+                            </Link>
                         </S.PaslaugosBox>
                         <S.PaslaugosBox>
-                            <S.PaslaugosImg src={generalinis} />
-                            <S.PaslaugosTitle>Generalinis Valymas</S.PaslaugosTitle>
+                            <Link to="/generalinisvalymas">
+                                <S.PaslaugosImg src={generalinis} />
+                                <S.PaslaugosTitle>Generalinis Valymas</S.PaslaugosTitle>
+                            </Link>
                         </S.PaslaugosBox>
                     </S.Paslaugos>
                     <S.YoutubeVideo>

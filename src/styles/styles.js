@@ -67,10 +67,11 @@ export const Note = styled.div`
 export const Paslaugos = styled.div`
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -82,8 +83,16 @@ export const PaslaugosBox = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: calc(100% / 3 - 3rem);
-    margin: 1rem;
+    width: 25%;
+    margin: 1rem 0;
+    position: relative;
+    text-align: center;
+    color: white;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 
     @media (max-width: 768px) {
         width: 100%;
@@ -95,14 +104,19 @@ export const PaslaugosImg = styled.img`
     width: 300px;
     height: 140px;
     border-radius: 5px;
+    opacity: 0.8;
 `;
 
 export const PaslaugosTitle = styled.div`
-    font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     padding: 5px;
-    color: #59bfff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
 `;
 
 export const YoutubeVideo = styled.div`
@@ -136,6 +150,11 @@ export const Title = styled.h1`
 export const PaslaugosInfo = styled.div`
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
+    width: 50%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 export const Kontaktai = styled.div`
@@ -176,6 +195,15 @@ export const KontaktaiText = styled.div`
 
 export const Galerija = styled.div`
     margin: 0 auto;
+    width: 50%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`;
+
+export const PrekiuGalerija = styled.div`
+    margin: 4rem auto 0 auto;
     width: 50%;
 
     @media (max-width: 768px) {
