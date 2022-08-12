@@ -33,10 +33,18 @@ const Kainos = () => {
                             <S.Kaina>15 - 20 Eur</S.Kaina>
                             <S.Kaina>10 - 15 Eur</S.Kaina>
                             <S.Kaina>5 - 10 Eur</S.Kaina>
-                            <S.Kaina>5 - 7 Eur/m2</S.Kaina>
-                            <S.Kaina>3 - 5 Eur/m2</S.Kaina>
-                            <S.Kaina>1 - 2 Eur/m2</S.Kaina>
-                            <S.Kaina>1.5 - 2.5 Eur/m2</S.Kaina>
+                            <S.Kaina>
+                                5 - 7 Eur/m<span>2</span>
+                            </S.Kaina>
+                            <S.Kaina>
+                                3 - 5 Eur/m<span>2</span>
+                            </S.Kaina>
+                            <S.Kaina>
+                                1 - 2 Eur/m<span>2</span>
+                            </S.Kaina>
+                            <S.Kaina>
+                                1.5 - 2.5 Eur/m<span>2</span>
+                            </S.Kaina>
                         </div>
                     </S.PaslauguKainos>
                     <S.Note>*Kaina gali kisti dėl užterštumo lygio.</S.Note>

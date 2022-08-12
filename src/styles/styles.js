@@ -51,6 +51,11 @@ export const Kaina = styled.div`
     font-weight: bold;
     padding: 5px;
 
+    span {
+        vertical-align: super;
+        font-size: 10px;
+    }
+
     @media (max-width: 768px) {
         font-size: 15px;
         height: 60px;
