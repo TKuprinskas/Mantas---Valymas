@@ -66,12 +66,11 @@ export const Note = styled.div`
 
 export const Paslaugos = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin: 0 auto 1rem auto;
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -83,11 +82,10 @@ export const PaslaugosBox = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: calc(100% / 5 - 0.5rem);
     margin: 1rem 0;
     position: relative;
     text-align: center;
-    color: white;
 
     a {
         text-decoration: none;
@@ -115,8 +113,13 @@ export const PaslaugosTitle = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     background-color: rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 export const YoutubeVideo = styled.div`
