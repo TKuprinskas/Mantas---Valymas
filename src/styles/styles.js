@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
 export const H1 = styled.h1`
-    font-size: 2.5rem;
+    font-size: 40px;
     font-weight: bold;
     color: #59bfff;
     margin-bottom: 1rem;
     text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
 `;
 
 export const H5 = styled.h5`
