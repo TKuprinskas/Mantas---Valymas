@@ -28,25 +28,55 @@ export const PaslauguKainos = styled.div`
     width: 50%;
     margin: 0 auto 1rem auto;
 
-    @media (max-width: 768px) {
-        width: 100%;
+    //phone screen
+    @media (max-width: 479px) {
+        width: 80%;
+    }
+
+    //large mobile
+    @media (min-width: 480px) and (max-width: 768px) {
+        width: 65%;
+    }
+
+    //ipad view
+    @media (min-width: 769px) and (max-width: 1024px) {
+        width: 55%;
     }
 `;
 
 export const Paslauga = styled.div`
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Roboto', sans-serif;
     padding: 5px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 340px) {
+        font-size: 12px;
+        height: 40px;
+        width: 100px;
+    }
+
+    @media (min-width: 341px) and (max-width: 479px) {
+        font-size: 12px;
+        height: 40px;
+        width: 120px;
+    }
+
+    @media (min-width: 480px) and (max-width: 768px) {
         font-size: 15px;
         height: 60px;
-        width: 180px;
+        width: 160px;
+    }
+
+    // ipad viewport
+    @media (min-width: 769px) and (max-width: 1024px) {
+        font-size: 15px;
+        height: 60px;
+        width: 160px;
     }
 `;
 
 export const Kaina = styled.div`
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     padding: 5px;
@@ -56,7 +86,23 @@ export const Kaina = styled.div`
         font-size: 10px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 340px) {
+        font-size: 12px;
+        height: 40px;
+    }
+
+    @media (min-width: 341px) and (max-width: 479px) {
+        font-size: 12px;
+        height: 40px;
+    }
+
+    @media (min-width: 480px) and (max-width: 768px) {
+        font-size: 15px;
+        height: 60px;
+    }
+
+    // ipad viewport
+    @media (min-width: 769px) and (max-width: 1024px) {
         font-size: 15px;
         height: 60px;
     }
