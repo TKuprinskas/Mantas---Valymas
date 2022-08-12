@@ -25,7 +25,7 @@ export const PaslauguKainos = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 35%;
+    width: 50%;
     margin: 0 auto 1rem auto;
 
     @media (max-width: 768px) {
@@ -34,26 +34,26 @@ export const PaslauguKainos = styled.div`
 `;
 
 export const Paslauga = styled.div`
-    font-size: 1.2rem;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
     padding: 5px;
 
     @media (max-width: 768px) {
-        font-size: 1rem;
-        height: 50px;
-        width: 200px;
+        font-size: 15px;
+        height: 60px;
+        width: 180px;
     }
 `;
 
 export const Kaina = styled.div`
-    font-size: 1.2rem;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     padding: 5px;
 
     @media (max-width: 768px) {
-        font-size: 1rem;
-        height: 50px;
+        font-size: 15px;
+        height: 60px;
     }
 `;
 
