@@ -14,7 +14,7 @@ const Footer = () => {
                             <a href="tel:+37066444444">+370 600 34478</a>
                         </li>
                         <li>
-                            <a href="mailto:svariusvalymopaslaugos@gmail.com">svariusvalymopaslaugos@gmail.com</a>
+                            <a href="mailto:svariusvalymopaslaugos@gmail.com">labas@svarius.lt</a>
                         </li>
                     </ul>
                 </div>

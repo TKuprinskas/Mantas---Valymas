@@ -35,7 +35,7 @@ const Kontaktai = () => {
                     <S.Kontaktai>
                         <S.KontaktaiText>Arba el.paštu:</S.KontaktaiText>
                         <S.KontaktaiText>
-                            <a href="mailto:svariusvalymopaslaugos@gmail.com">svariusvalymopaslaugos@gmail</a>
+                            <a href="mailto:svariusvalymopaslaugos@gmail.com">labas@svarius.lt</a>
                         </S.KontaktaiText>
                     </S.Kontaktai>
                 </S.Container>
