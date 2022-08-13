@@ -224,6 +224,7 @@ export const Kontaktai = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
         margin-top: 1rem;
+        width: 100%;
     }
 `;
 
@@ -247,6 +248,7 @@ export const KontaktaiText = styled.div`
     @media (max-width: 768px) {
         margin: 0.5rem 0 0 0;
         text-align: justify;
+        width: 100%;
     }
 `;
 
