@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import sanityClient from '../../../client';
 import './Footer.css';
 import { Link } from 'react-router-dom';
