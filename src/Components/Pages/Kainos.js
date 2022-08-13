@@ -1,7 +1,28 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
+import sanityClient from '../../client';
 import * as S from '../../styles/styles';
 
 const Kainos = () => {
+    const [kainosData, setData] = useState([]);
+    console.log(kainosData);
+
+    useEffect(() => {
+        sanityClient
+            .fetch(
+                `*[_type == "kainos"]{
+                title,
+                price,
+                priceType,
+            }`
+            )
+            .then((data) => {
+                setData(data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+
     return (
         <main style={{ borderBottom: '1px solid #59bfff' }}>
             <Suspense fallback={<div>Loading...</div>}>

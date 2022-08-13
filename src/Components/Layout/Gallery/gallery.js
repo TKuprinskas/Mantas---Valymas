@@ -22,55 +22,55 @@ import f17 from '../../../Assets/Images/galerija/17.jpg';
 const Gallery = () => (
     <Carousel autoPlay infiniteLoop>
         <ImgBox>
-            <img src={f1} />
+            <img src={f1} alt="f1" />
         </ImgBox>
         <ImgBox>
-            <img src={f2} />
+            <img src={f2} alt="f2" />
         </ImgBox>
         <ImgBox>
-            <img src={f3} />
+            <img src={f3} alt="f3" />
         </ImgBox>
         <ImgBox>
-            <img src={f4} />
+            <img src={f4} alt="f4" />
         </ImgBox>
         <ImgBox>
-            <img src={f5} />
+            <img src={f5} alt="f5" />
         </ImgBox>
         <ImgBox>
-            <img src={f6} />
+            <img src={f6} alt="f6" />
         </ImgBox>
         <ImgBox>
-            <img src={f7} />
+            <img src={f7} alt="f7" />
         </ImgBox>
         <ImgBox>
-            <img src={f8} />
+            <img src={f8} alt="f8" />
         </ImgBox>
         <ImgBox>
-            <img src={f9} />
+            <img src={f9} alt="f9" />
         </ImgBox>
         <ImgBox>
-            <img src={f10} />
+            <img src={f10} alt="f10" />
         </ImgBox>
         <ImgBox>
-            <img src={f11} />
+            <img src={f11} alt="f11" />
         </ImgBox>
         <ImgBox>
-            <img src={f12} />
+            <img src={f12} alt="f12" />
         </ImgBox>
         <ImgBox>
-            <img src={f13} />
+            <img src={f13} alt="f13" />
         </ImgBox>
         <ImgBox>
-            <img src={f14} />
+            <img src={f14} alt="f14" />
         </ImgBox>
         <ImgBox>
-            <img src={f15} />
+            <img src={f15} alt="f15" />
         </ImgBox>
         <ImgBox>
-            <img src={f16} />
+            <img src={f16} alt="f16" />
         </ImgBox>
         <ImgBox>
-            <img src={f17} />
+            <img src={f17} alt="f17" />
         </ImgBox>
     </Carousel>
 );
