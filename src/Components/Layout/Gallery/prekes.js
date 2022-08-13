@@ -1,35 +1,50 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import sanityClient from '../../../client';
 import { Carousel } from 'react-responsive-carousel';
-import f1 from '../../../Assets/Images/prekes/R1.jpg';
-import f2 from '../../../Assets/Images/prekes/R2.jpg';
-import f3 from '../../../Assets/Images/prekes/R3.jpg';
-import f4 from '../../../Assets/Images/prekes/R4.jpg';
-import f5 from '../../../Assets/Images/prekes/R5.jpg';
-import f6 from '../../../Assets/Images/prekes/R6.jpg';
 
-const Prekes = () => (
-    <Carousel autoPlay infiniteLoop>
-        <ImgBox>
-            <img src={f1} />
-        </ImgBox>
-        <ImgBox>
-            <img src={f2} />
-        </ImgBox>
-        <ImgBox>
-            <img src={f3} />
-        </ImgBox>
-        <ImgBox>
-            <img src={f4} />
-        </ImgBox>
-        <ImgBox>
-            <img src={f5} />
-        </ImgBox>
-        <ImgBox>
-            <img src={f6} />
-        </ImgBox>
-    </Carousel>
-);
+const Prekes = () => {
+    const [loaded, setLoaded] = useState(false);
+    const [galleryData, setData] = useState();
+
+    useEffect(() => {
+        sanityClient
+            .fetch(
+                `*[_type == "prekes"]{
+                images[] {
+                    asset->{
+                        _id,
+                        url,
+                    },
+                    alt,
+                },
+            }`
+            )
+            .then((data) => {
+                setData(data[0].images);
+                setLoaded(true);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+
+    if (!loaded) {
+        return <div>Loading...</div>;
+    }
+
+    return (
+        <Carousel autoPlay infiniteLoop>
+            {galleryData.map((item, i) => {
+                return (
+                    <ImgBox key={i}>
+                        <img src={item.asset.url} alt={item.alt} />
+                    </ImgBox>
+                );
+            })}
+        </Carousel>
+    );
+};
 
 export default Prekes;
 

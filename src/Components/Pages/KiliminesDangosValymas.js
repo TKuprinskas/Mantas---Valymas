@@ -1,14 +1,40 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
+import sanityClient from '../../client';
 import * as S from '../../styles/styles';
 
 const KiliminesDangosValymas = () => {
+    const [loaded, setLoaded] = useState(false);
+    const [pageData, setData] = useState([]);
+
+    useEffect(() => {
+        sanityClient
+            .fetch(
+                `*[_type == "puslapiai"]{
+                    title,
+                    content
+                }`
+            )
+            .then((data) => {
+                setData(data);
+                setLoaded(true);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+
+    if (!loaded) {
+        return <div>Loading...</div>;
+    }
+
+    const filteredData = pageData.filter((item) => item.title === 'Kiliminės Dangos Valymas');
+
     return (
         <main>
             <Suspense fallback={<div>Loading...</div>}>
-                <S.Title>Kiliminės Dangos Valymas</S.Title>
+                <S.Title>{filteredData[0].title}</S.Title>
                 <S.PaslaugosInfo>
-                    Kiliminė danga - biuro vizitinė kortelė. Stengiamės, kad jūsų klientai ir svečiai jaustųsi jaukiai,
-                    neskaičiuotų dėmių ir visą dėmesį skirtų jums!
+                    <S.StyledBlockContent blocks={filteredData[0].content} projectId="0cvz2s8c" dataset="production" />
                 </S.PaslaugosInfo>
             </Suspense>
         </main>

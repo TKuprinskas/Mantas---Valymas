@@ -52,7 +52,7 @@ const Navbarmenu = () => {
             <div className="navbar__container">
                 <div className="row">
                     <div className="header__middle__logo">
-                        <NavLink exact activeClassName="is-active" to="/">
+                        <NavLink className={(navData) => (navData.isActive ? 'is-active' : '')} to="/">
                             <img src={logo} alt="logo" />
                         </NavLink>
                     </div>
@@ -77,11 +77,11 @@ const Navbarmenu = () => {
                                         Paslaugos <FiChevronDown />
                                     </Link>
                                     <ul className={paslaugosSubMenu.join(' ')}>
-                                        {PaslaugosMenu.map((item, index) => (
-                                            <li key={index}>
+                                        {PaslaugosMenu.map((item, i) => (
+                                            <li key={i}>
                                                 <NavLink
                                                     onClick={toggleClass}
-                                                    activeClassName={item.cName}
+                                                    className={(navData) => (navData.isActive ? item.cName : '')}
                                                     to={item.url}
                                                 >
                                                     {item.title}
@@ -95,11 +95,11 @@ const Navbarmenu = () => {
                                         Prekės <FiChevronDown />
                                     </Link>
                                     <ul className={prekesSubMenu.join(' ')}>
-                                        {PrekesMenu.map((item, index) => (
-                                            <li key={index}>
+                                        {PrekesMenu.map((item, j) => (
+                                            <li key={j}>
                                                 <NavLink
                                                     onClick={toggleClass}
-                                                    activeClassName={item.cName}
+                                                    className={(navData) => (navData.isActive ? item.cName : '')}
                                                     to={item.url}
                                                 >
                                                     {item.title}
@@ -108,9 +108,13 @@ const Navbarmenu = () => {
                                         ))}
                                     </ul>
                                 </li>
-                                {MenuItems.map((item, index) => (
-                                    <li className="menu-item ">
-                                        <NavLink onClick={toggleClass} activeClassName={item.cName} to={item.url}>
+                                {MenuItems.map((item, k) => (
+                                    <li className="menu-item " key={k}>
+                                        <NavLink
+                                            onClick={toggleClass}
+                                            className={(navData) => (navData.isActive ? item.cName : '')}
+                                            to={item.url}
+                                        >
                                             {item.title}
                                         </NavLink>
                                     </li>

@@ -1,14 +1,40 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
+import sanityClient from '../../client';
 import * as S from '../../styles/styles';
 
 const GeneralinisValymas = () => {
+    const [loaded, setLoaded] = useState(false);
+    const [pageData, setData] = useState([]);
+
+    useEffect(() => {
+        sanityClient
+            .fetch(
+                `*[_type == "puslapiai"]{
+                    title,
+                    content
+                }`
+            )
+            .then((data) => {
+                setData(data);
+                setLoaded(true);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+
+    if (!loaded) {
+        return <div>Loading...</div>;
+    }
+
+    const filteredData = pageData.filter((item) => item.title === 'Generalinis Valymas');
+
     return (
         <main>
             <Suspense fallback={<div>Loading...</div>}>
-                <S.Title>Generalinis Valymas</S.Title>
+                <S.Title>{filteredData[0].title}</S.Title>
                 <S.PaslaugosInfo>
-                    Parduodant ar įsigijus būstą, po nuomininkų ar svečių apsilankymo, prieš atvykstant uošviams -
-                    generalinis valymas visiems gyvenimo atvejams!
+                    <S.StyledBlockContent blocks={filteredData[0].content} projectId="0cvz2s8c" dataset="production" />
                 </S.PaslaugosInfo>
             </Suspense>
         </main>
