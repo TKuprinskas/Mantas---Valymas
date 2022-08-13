@@ -1,8 +1,35 @@
-import React from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
+import sanityClient from '../../../client';
 import './Footer.css';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+    const [loaded, setLoaded] = useState(false);
+    const [pageData, setData] = useState([]);
+
+    useEffect(() => {
+        sanityClient
+            .fetch(
+                `*[_type == "kontaktai"]{
+                    title,
+                    content,
+                    social,
+                    telemail
+                }`
+            )
+            .then((data) => {
+                setData(data);
+                setLoaded(true);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+
+    if (!loaded) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div className="footer">
             <div className="footer-content">
@@ -11,10 +38,10 @@ const Footer = () => {
                     <ul>
                         <li>MB Švarius</li>
                         <li>
-                            <a href="tel:+37066444444">+370 600 34478</a>
+                            <a href={'tel:' + pageData[0].telemail.telefonas}>{pageData[0].telemail.telefonas}</a>
                         </li>
                         <li>
-                            <a href="mailto:svariusvalymopaslaugos@gmail.com">labas@svarius.lt</a>
+                            <a href={'mailto:' + pageData[0].telemail.email}>labas@svarius.lt</a>
                         </li>
                     </ul>
                 </div>
@@ -23,25 +50,13 @@ const Footer = () => {
                         <h3>Mus galite sekti</h3>
                         <ul>
                             <li>
-                                <a
-                                    href="https://www.facebook.com/svariusvalymas"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
+                                <a href={pageData[0].social.facebook} target="_blank" rel="noreferrer noopener">
                                     <i className="fab fa-facebook" />
                                 </a>{' '}
-                                <a
-                                    href="https://www.instagram.com/svarius_valymas/"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
+                                <a href={pageData[0].social.instagram} target="_blank" rel="noreferrer noopener">
                                     <i className="fab fa-instagram-square" />
                                 </a>{' '}
-                                <a
-                                    href="https://www.youtube.com/channel/UC47WP-dm4sJU_3FBQ-PJZsQ"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
+                                <a href={pageData[0].social.youtube} target="_blank" rel="noreferrer noopener">
                                     <i className="fab fa-youtube" />
                                 </a>{' '}
                             </li>

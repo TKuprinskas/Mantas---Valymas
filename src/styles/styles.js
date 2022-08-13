@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BlockContent from '@sanity/block-content-to-react';
 
 export const H1 = styled.h1`
     font-size: 40px;
@@ -206,7 +207,6 @@ export const Title = styled.h1`
 `;
 
 export const PaslaugosInfo = styled.div`
-    font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
     width: 50%;
 
@@ -217,9 +217,9 @@ export const PaslaugosInfo = styled.div`
 
 export const Kontaktai = styled.div`
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: flex-start;
-    width: 100%;
+    width: 50%;
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -228,11 +228,10 @@ export const Kontaktai = styled.div`
 `;
 
 export const KontaktaiText = styled.div`
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
+    width: 50%;
     margin: 0.5rem 0;
 
-    a {
+    a:not(:first-child) {
         margin-left: 1rem;
     }
 
@@ -266,5 +265,12 @@ export const PrekiuGalerija = styled.div`
 
     @media (max-width: 768px) {
         width: 100%;
+    }
+`;
+
+export const StyledBlockContent = styled(BlockContent)`
+    img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 `;
