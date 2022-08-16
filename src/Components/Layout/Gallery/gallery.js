@@ -34,7 +34,7 @@ const Gallery = () => {
     }
 
     return (
-        <Carousel autoPlay infiniteLoop>
+        <Carousel autoPlay infiniteLoop showThumbs={false}>
             {galleryData.map((item, i) => {
                 return (
                     <ImgBox key={i}>

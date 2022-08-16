@@ -35,7 +35,7 @@ function App() {
                         <Route path="/kiliminesdangosvalymas" element={<KiliminesDangosValymas />} />
                         <Route path="/kilimuvalymas" element={<KilimuValymas />} />
                         <Route path="/generalinisvalymas" element={<GeneralinisValymas />} />
-                        <Route path="/ciuzinuvalymas" element={<CiuziniuValymas />} />
+                        <Route path="/ciuziniuvalymas" element={<CiuziniuValymas />} />
                     </Routes>
                 </Container>
                 <Footer />

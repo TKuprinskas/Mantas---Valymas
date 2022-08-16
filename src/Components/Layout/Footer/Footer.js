@@ -36,7 +36,7 @@ const Footer = () => {
                 <div className="footer-content-left">
                     <h3>Kontaktai</h3>
                     <ul>
-                        <li>MB Švarius</li>
+                        <li>Švarius</li>
                         <li>
                             <a href={'tel:' + pageData[0].telemail.telefonas}>{pageData[0].telemail.telefonas}</a>
                         </li>

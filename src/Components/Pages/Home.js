@@ -53,7 +53,7 @@ const Home = () => {
     return (
         <main style={{ borderBottom: '1px solid #59bfff' }}>
             <Suspense fallback={<div>Loading...</div>}>
-                <S.Title>Apie Mus</S.Title>
+                <S.Title>Apie mus</S.Title>
                 <S.H5>Mes mylime švarą! Kviečiame susipažinti!</S.H5>
                 <S.Container>
                     <S.Paslaugos>
