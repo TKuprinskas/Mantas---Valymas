@@ -12,6 +12,7 @@ const Home = () => {
         sanityClient
             .fetch(
                 `*[_type == "paslaugos"]{
+                    order,
                     paslauga,
                     image {
                         asset->{
@@ -45,7 +46,7 @@ const Home = () => {
     }, []);
 
     if (!loaded) {
-        return <div>Loading...</div>;
+        return null;
     }
 
     const filteredYoutube = youtube ? youtube.filter((item) => item.title === 'Home') : [];
@@ -57,14 +58,16 @@ const Home = () => {
                 <S.H5>Mes mylime švarą! Kviečiame susipažinti!</S.H5>
                 <S.Container>
                     <S.Paslaugos>
-                        {paslaugosData.map((item, i) => (
-                            <S.PaslaugosBox key={i}>
-                                <Link to={'/' + item.link}>
-                                    <S.PaslaugosImg src={item.image.asset.url} />
-                                    <S.PaslaugosTitle>{item.paslauga}</S.PaslaugosTitle>
-                                </Link>
-                            </S.PaslaugosBox>
-                        ))}
+                        {paslaugosData
+                            .sort((a, b) => a.order - b.order)
+                            .map((item, i) => (
+                                <S.PaslaugosBox key={i}>
+                                    <Link to={'/' + item.link}>
+                                        <S.PaslaugosImg src={item.image.asset.url} />
+                                        <S.PaslaugosTitle>{item.paslauga}</S.PaslaugosTitle>
+                                    </Link>
+                                </S.PaslaugosBox>
+                            ))}
                     </S.Paslaugos>
                     <S.YoutubeVideo>
                         <iframe

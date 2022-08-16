@@ -27,7 +27,7 @@ const Footer = () => {
     }, []);
 
     if (!loaded) {
-        return <div>Loading...</div>;
+        return null;
     }
 
     return (

@@ -30,7 +30,7 @@ const Gallery = () => {
     }, []);
 
     if (!loaded) {
-        return <div>Loading...</div>;
+        return null;
     }
 
     return (

@@ -11,7 +11,8 @@ const KilimuValymas = () => {
             .fetch(
                 `*[_type == "puslapiai"]{
                     title,
-                    content
+                    content,
+                    link,
                 }`
             )
             .then((data) => {
@@ -24,10 +25,10 @@ const KilimuValymas = () => {
     }, []);
 
     if (!loaded) {
-        return <div>Loading...</div>;
+        return null;
     }
 
-    const filteredData = pageData.filter((item) => item.title === 'Kilimų valymas');
+    const filteredData = pageData.filter((item) => item.link === 'kilimuvalymas');
 
     return (
         <main>

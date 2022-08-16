@@ -11,7 +11,8 @@ const CiuziniuValymas = () => {
             .fetch(
                 `*[_type == "puslapiai"]{
                     title,
-                    content
+                    content,
+                    link,
                 }`
             )
             .then((data) => {
@@ -24,10 +25,10 @@ const CiuziniuValymas = () => {
     }, []);
 
     if (!loaded) {
-        return <div>Loading...</div>;
+        return null;
     }
 
-    const filteredData = pageData.filter((item) => item.title === 'Čiužinių valymas');
+    const filteredData = pageData.filter((item) => item.link === 'ciuziniuvalymas');
 
     return (
         <main>

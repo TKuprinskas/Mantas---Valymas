@@ -10,6 +10,7 @@ const Kainos = () => {
         sanityClient
             .fetch(
                 `*[_type == "kainos"]{
+                order,
                 title,
                 price,
                 priceType,
@@ -25,7 +26,7 @@ const Kainos = () => {
     }, []);
 
     if (!loaded) {
-        return <div>Loading...</div>;
+        return null;
     }
 
     return (
@@ -36,15 +37,7 @@ const Kainos = () => {
                     <S.PaslauguKainos>
                         <div>
                             {kainosData
-                                .sort((a, b) => {
-                                    if (a.title < b.title) {
-                                        return -1;
-                                    }
-                                    if (a.title > b.title) {
-                                        return 1;
-                                    }
-                                    return 0;
-                                })
+                                .sort((a, b) => a.order - b.order)
                                 .map(({ title }, i) => (
                                     <S.Paslauga key={i}>{title}</S.Paslauga>
                                 ))}
@@ -59,7 +52,7 @@ const Kainos = () => {
                             ))}
                         </div>
                     </S.PaslauguKainos>
-                    <S.Note>*Kaina gali kisti dėl užterštumo lygio.</S.Note>
+                    <S.Note>*Kaina gali kisti dėl užterštumo lygio ar nestandartinio baldo dydžio.</S.Note>
                 </S.Container>
             </Suspense>
         </main>

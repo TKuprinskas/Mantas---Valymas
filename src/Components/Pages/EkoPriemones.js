@@ -12,7 +12,8 @@ const EkoPriemones = () => {
         sanityClient
             .fetch(
                 `*[_type == "prekes"]{
-                    content
+                    title,
+                    content,
                 }`
             )
             .then((data) => {
@@ -25,13 +26,13 @@ const EkoPriemones = () => {
     }, []);
 
     if (!loaded) {
-        return <div>Loading...</div>;
+        return null;
     }
 
     return (
         <main>
             <Suspense fallback={<div>Loading...</div>}>
-                <S.Title>Ekologiškos Valymo Priemonės</S.Title>
+                <S.Title>{pageData[0].title}</S.Title>
                 <S.PaslaugosInfo>
                     <S.StyledBlockContent blocks={pageData[0].content} projectId="0cvz2s8c" dataset="production" />
                 </S.PaslaugosInfo>

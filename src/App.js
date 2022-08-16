@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import ReactGA from 'react-ga';
+import './App.css';
 import Navbarmenu from './Components/Layout/Header/Navbarmenu';
 import Hero from './Components/Layout/Hero/Hero';
 import Home from './Components/Pages/Home';
@@ -17,7 +18,14 @@ import KilimuValymas from './Components/Pages/KilimuValymas';
 import GeneralinisValymas from './Components/Pages/GeneralinisValymas';
 import CiuziniuValymas from './Components/Pages/CiuziniuValymas';
 
+const TRACKING_ID = 'UA-213425407-1';
+ReactGA.initialize(TRACKING_ID);
+
 function App() {
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
+
     return (
         <div className="App">
             <Suspense fallback={<div>Loading...</div>}>

@@ -11,7 +11,8 @@ const KiliminesDangosValymas = () => {
             .fetch(
                 `*[_type == "puslapiai"]{
                     title,
-                    content
+                    content,
+                    link,
                 }`
             )
             .then((data) => {
@@ -24,10 +25,10 @@ const KiliminesDangosValymas = () => {
     }, []);
 
     if (!loaded) {
-        return <div>Loading...</div>;
+        return null;
     }
 
-    const filteredData = pageData.filter((item) => item.title === 'Kiliminės dangos valymas');
+    const filteredData = pageData.filter((item) => item.link === 'kiliminesdangosvalymas');
 
     return (
         <main>

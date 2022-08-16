@@ -11,7 +11,8 @@ const GeneralinisValymas = () => {
             .fetch(
                 `*[_type == "puslapiai"]{
                     title,
-                    content
+                    content,
+                    link,
                 }`
             )
             .then((data) => {
@@ -24,10 +25,10 @@ const GeneralinisValymas = () => {
     }, []);
 
     if (!loaded) {
-        return <div>Loading...</div>;
+        return null;
     }
 
-    const filteredData = pageData.filter((item) => item.title === 'Generalinis valymas');
+    const filteredData = pageData.filter((item) => item.link === 'generalinisvalymas');
 
     return (
         <main>
