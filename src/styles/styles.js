@@ -40,7 +40,7 @@ export const PaslauguKainos = styled.div`
 
     //large mobile
     @media (min-width: 480px) and (max-width: 768px) {
-        width: 65%;
+        width: 70%;
     }
 
     //ipad view
@@ -56,27 +56,30 @@ export const Paslauga = styled.div`
 
     @media (max-width: 340px) {
         font-size: 12px;
-        height: 40px;
-        width: 100px;
+        height: 50px;
+        width: 120px;
+        padding: 0;
     }
 
     @media (min-width: 341px) and (max-width: 479px) {
         font-size: 12px;
         height: 40px;
-        width: 120px;
+        width: 130px;
+        padding: 0;
     }
 
     @media (min-width: 480px) and (max-width: 768px) {
         font-size: 15px;
         height: 60px;
-        width: 160px;
+        width: 150px;
+        padding: 0;
     }
 
-    // ipad viewport
     @media (min-width: 769px) and (max-width: 1024px) {
         font-size: 15px;
         height: 60px;
         width: 160px;
+        padding: 0;
     }
 `;
 
@@ -93,23 +96,26 @@ export const Kaina = styled.div`
 
     @media (max-width: 340px) {
         font-size: 12px;
-        height: 40px;
+        height: 50px;
+        padding: 0;
     }
 
     @media (min-width: 341px) and (max-width: 479px) {
         font-size: 12px;
         height: 40px;
+        padding: 0;
     }
 
     @media (min-width: 480px) and (max-width: 768px) {
         font-size: 15px;
         height: 60px;
+        padding: 0;
     }
 
-    // ipad viewport
     @media (min-width: 769px) and (max-width: 1024px) {
         font-size: 15px;
         height: 60px;
+        padding: 0;
     }
 `;
 
