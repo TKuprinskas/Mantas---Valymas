@@ -27,7 +27,7 @@ const KilimuValymas = () => {
         return <div>Loading...</div>;
     }
 
-    const filteredData = pageData.filter((item) => item.title === 'Kilimų Valymas');
+    const filteredData = pageData.filter((item) => item.title === 'Kilimų valymas');
 
     return (
         <main>

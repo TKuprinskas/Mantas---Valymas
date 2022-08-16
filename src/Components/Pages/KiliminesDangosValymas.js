@@ -27,7 +27,7 @@ const KiliminesDangosValymas = () => {
         return <div>Loading...</div>;
     }
 
-    const filteredData = pageData.filter((item) => item.title === 'Kiliminės Dangos Valymas');
+    const filteredData = pageData.filter((item) => item.title === 'Kiliminės dangos valymas');
 
     return (
         <main>

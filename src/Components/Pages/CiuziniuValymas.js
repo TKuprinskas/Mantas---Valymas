@@ -27,7 +27,7 @@ const CiuziniuValymas = () => {
         return <div>Loading...</div>;
     }
 
-    const filteredData = pageData.filter((item) => item.title === 'Čiužinių Valymas');
+    const filteredData = pageData.filter((item) => item.title === 'Čiužinių valymas');
 
     return (
         <main>

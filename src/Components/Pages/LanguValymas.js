@@ -27,7 +27,7 @@ const LanguValymas = () => {
         return <div>Loading...</div>;
     }
 
-    const filteredData = pageData.filter((item) => item.title === 'Langų Valymas');
+    const filteredData = pageData.filter((item) => item.title === 'Langų valymas');
 
     return (
         <main>
