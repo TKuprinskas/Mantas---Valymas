@@ -18,32 +18,32 @@ export const MenuItems = [
 
 export const PaslaugosMenu = [
     {
-        title: 'Baldų Valymas',
+        title: 'Baldų valymas',
         url: '/balduvalymas',
         activeClassName: 'is-active',
     },
     {
-        title: 'Čiužinių Valymas',
-        url: '/ciuzinuvalymas',
+        title: 'Čiužinių valymas',
+        url: '/ciuziniuvalymas',
         cName: 'is-active',
     },
     {
-        title: 'Kilimų Valymas',
+        title: 'Kilimų valymas',
         url: '/kilimuvalymas',
         cName: 'is-active',
     },
     {
-        title: 'Kiliminės Dangos Valymos',
+        title: 'Kiliminės dangos valymos',
         url: '/kiliminesdangosvalymas',
         cName: 'is-active',
     },
     {
-        title: 'Langų Valymas',
+        title: 'Langų valymas',
         url: '/languvalymas',
         cName: 'is-active',
     },
     {
-        title: 'Generalinis Valymas',
+        title: 'Generalinis valymas',
         url: '/generalinisvalymas',
         cName: 'is-active',
     },
