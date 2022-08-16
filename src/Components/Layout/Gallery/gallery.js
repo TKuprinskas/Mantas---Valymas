@@ -11,7 +11,7 @@ const Gallery = () => {
         sanityClient
             .fetch(
                 `*[_type == "galerija"]{
-                images[] {
+                    images[] {
                     asset->{
                         _id,
                         url,
@@ -21,7 +21,7 @@ const Gallery = () => {
             }`
             )
             .then((data) => {
-                setData(data[0].images);
+                setData(data[0]);
                 setLoaded(true);
             })
             .catch((err) => {
@@ -35,7 +35,7 @@ const Gallery = () => {
 
     return (
         <Carousel autoPlay infiniteLoop showThumbs={false}>
-            {galleryData.map((item, i) => {
+            {galleryData.images.map((item, i) => {
                 return (
                     <ImgBox key={i}>
                         <img src={item.asset.url} alt={item.alt} />

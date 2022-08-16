@@ -32,7 +32,7 @@ const Kainos = () => {
     return (
         <main style={{ borderBottom: '1px solid #59bfff' }}>
             <Suspense fallback={<div>Loading...</div>}>
-                <S.H1>Valymo Paslaugų Kainos</S.H1>
+                <S.H1>Valymo paslaugų kainos</S.H1>
                 <S.Container>
                     <S.PaslauguKainos>
                         <div>
