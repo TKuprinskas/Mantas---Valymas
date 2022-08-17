@@ -18,7 +18,7 @@ import KilimuValymas from './Components/Pages/KilimuValymas';
 import GeneralinisValymas from './Components/Pages/GeneralinisValymas';
 import CiuziniuValymas from './Components/Pages/CiuziniuValymas';
 
-const TRACKING_ID = 'UA-213425407-1';
+const TRACKING_ID = 'UA-237600761-1';
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
