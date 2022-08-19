@@ -81,6 +81,21 @@
     height: 76px;
 }
 
+.copyright {
+    width: 100%;
+}
+
+.copyright div {
+    text-align: center;
+    margin-left: 3rem;
+    padding-bottom: 1rem;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: #fff;
+}
+
 @media only screen and (max-width: 768px) {
     .footer-content {
         flex-direction: column;
@@ -99,5 +114,9 @@
 
     .apps-logos img {
         margin-top: -20px;
+    }
+
+    .copyright div {
+        margin-left: 0;
     }
 }

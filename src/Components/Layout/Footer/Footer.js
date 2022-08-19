@@ -75,6 +75,14 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
+            <div className="copyright">
+                <div>
+                    {new Date().getFullYear()} &copy;{' '}
+                    <a href="https://www.tkuprinskas.lt" target="_blank" rel="noreferrer noopener">
+                        tkuprinskas.lt
+                    </a>
+                </div>
+            </div>
         </div>
     );
 };
