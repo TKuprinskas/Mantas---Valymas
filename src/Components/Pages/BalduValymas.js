@@ -28,7 +28,7 @@ const BalduValymas = () => {
         return null;
     }
 
-    const filteredData = pageData.filter((item) => item.link === 'balduvalymas');
+    const filteredData = pageData.filter((item) => item.link === 'baldu-valymas');
 
     return (
         <main>

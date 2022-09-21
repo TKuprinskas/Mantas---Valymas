@@ -28,7 +28,7 @@ const CiuziniuValymas = () => {
         return null;
     }
 
-    const filteredData = pageData.filter((item) => item.link === 'ciuziniuvalymas');
+    const filteredData = pageData.filter((item) => item.link === 'ciuziniu-valymas');
 
     return (
         <main>

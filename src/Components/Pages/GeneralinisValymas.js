@@ -28,7 +28,7 @@ const GeneralinisValymas = () => {
         return null;
     }
 
-    const filteredData = pageData.filter((item) => item.link === 'generalinisvalymas');
+    const filteredData = pageData.filter((item) => item.link === 'generalinis-valymas');
 
     return (
         <main>

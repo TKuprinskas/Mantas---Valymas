@@ -36,14 +36,14 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/kainos" element={<Kainos />} />
                         <Route path="/kontaktai" element={<Kontaktai />} />
-                        <Route path="/balduvalymas" element={<BalduValymas />} />
+                        <Route path="/baldu-valymas" element={<BalduValymas />} />
                         <Route path="/galerija" element={<Galerija />} />
                         <Route path="/ekologisvalymopriemones" element={<EkoPriemones />} />
-                        <Route path="/languvalymas" element={<LanguValymas />} />
-                        <Route path="/kiliminesdangosvalymas" element={<KiliminesDangosValymas />} />
-                        <Route path="/kilimuvalymas" element={<KilimuValymas />} />
-                        <Route path="/generalinisvalymas" element={<GeneralinisValymas />} />
-                        <Route path="/ciuziniuvalymas" element={<CiuziniuValymas />} />
+                        <Route path="/langu-valymas" element={<LanguValymas />} />
+                        <Route path="/kiliminesdangos-valymas" element={<KiliminesDangosValymas />} />
+                        <Route path="/kilimu-valymas" element={<KilimuValymas />} />
+                        <Route path="/generalinis-valymas" element={<GeneralinisValymas />} />
+                        <Route path="/ciuziniu-valymas" element={<CiuziniuValymas />} />
                     </Routes>
                 </Container>
                 <Footer />
