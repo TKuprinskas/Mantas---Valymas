@@ -28,7 +28,7 @@ const LanguValymas = () => {
         return null;
     }
 
-    const filteredData = pageData.filter((item) => item.link === 'langu valymas');
+    const filteredData = pageData.filter((item) => item.link === 'langu-valymas');
 
     return (
         <main>
